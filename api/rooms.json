@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "type": "standard",
+    "name": "Standard Room ",
+    "description": "A cozy room with a comfortable bed and basic amenities.",
+    "image": "../image/room.jpg",
+    "price": 1000
+  },
+  {
+    "id": 2,
+    "type": "standard",
+    "name": "Standard Room ",
+    "description": "A bright and airy room with a view of the city.",
+    "image": "../image/room.jpg",
+    "price": 1200
+  },
+  {
+    "id": 3,
+    "type": "standard",
+    "name": "Standard Room ",
+    "description": "A spacious room with a king-size bed and a comfortable sofa.",
+    "image": "../image/room.jpg",
+    "price": 1500
+  },
+  {
+    "id": 4,
+    "type": "standard",
+    "name": "Standard Room ",
+    "description": "A modern and stylish room with a work desk and a lounge chair.",
+    "image": "../image/room.jpg",
+    "price": 1300
+  },
+  {
+    "id": 5,
+    "type": "standard",
+    "name": "Standard Room ",
+    "description": "A comfortable room with a queen-size bed and a balcony.",
+    "image": "../image/room.jpg",
+    "price": 1100
+  },
+  {
+    "id": 6,
+    "type": "premium",
+    "name": "Premium Room ",
+    "description": "A luxurious room with a spa bath and a private balcony overlooking the sea.",
+    "image": "../image/room.jpg",
+    "price": 3000
+  },
+  {
+    "id": 7,
+    "type": "premium",
+    "name": "Premium Room ",
+    "description": "A spacious room with a king-size bed and a separate living area.",
+    "image": "../image/room.jpg",
+    "price": 2800
+  },
+  {
+    "id": 8,
+    "type": "premium",
+    "name": "Premium Room ",
+    "description": "An elegant room with a four-poster bed and a fireplace.",
+    "image": "../image/room.jpg",
+    "price": 3200
+  },
+  {
+    "id": 9,
+    "type": "premium",
+    "name": "Premium Room ",
+    "description": "A modern and luxurious room with a private balcony and a spa bath.",
+    "image": "../image/room.jpg",
+    "price": 3500
+  },
+  {
+    "id": 10,
+    "type": "premium",
+    "name": "Premium Room ",
+    "description": "A spacious room with a king-size bed and a private balcony overlooking the mountains.",
+    "image": "../image/room.jpg",
+    "price": 2900
+  },
+  {
+    "id": 11,
+    "type": "standard",
+    "name": "Standard Room ",
+    "description": "A cozy room with a comfortable bed and basic amenities.",
+    "image": "../image/room.jpg",
+    "price": 5320
+  }
+]

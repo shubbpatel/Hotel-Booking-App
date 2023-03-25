@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel Room Booking</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
+      "
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script type="text/javascript" src="../renderRooms.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="script.js"></script>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="" id="navb">
+      <div class="container-fluid">
+        <h1
+          style="color: white; font-weight: 900; font-size: 1.5rem"
+          class="navbar-brand mx-auto hh1"
+          href="#"
+        >
+          Hotel ZoYo
+        </h1>
+      </div>
+      <div id="cartButton">
+        <button type="button" class="btn btn-dark position-relative">
+          <b>Cart</b>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+          >
+            2
+            <span class="visually-hidden"></span>
+          </span>
+        </button>
+      </div>
+      <!-- <a class="navbar-brand" href="#">Hotel Room Booking</a> -->
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+			</ul>
+		</div> -->
+    </nav>
+
+    <section id="header" style="position: relative">
+      <img src="../image/room.jpg" style="width: 100%; height: auto" alt="" />
+      <h1
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          padding: 1rem;
+          color: rgb(105, 141, 105);
+          font-size: 5rem;
+          /* background-color:rgb(55, 70, 85); */
+          backdrop-filter: blur(1px) saturate(50%);
+        "
+      >
+        ZoYo Hotels
+      </h1>
+    </section>
+    <!-- Room List Section -->
+    <section
+      class="container-fluid my-4"
+      id="availRoom"
+      style="background: black"
+    >
+      <div style="color: red" id="roomsLoading"></div>
+      <div>
+        <div id="roomList" class=""></div>
+      </div>
+    </section>
+    <section id="cartBilling" class="d-flex justify-content-end">
+      <div
+        id="cartContainer"
+        class="col-6"
+        style="border-radius: 0px; padding: 20px; background-color: #fbfcfc"
+      >
+        <h2>Cart</h2>
+        <div
+          id="cart"
+          style="
+            max-height: 600px;
+            padding: 20px;
+            height: 500px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            /* border: 2px solid black; */
+            border-radius: 0px;
+            background-color: rgb(244, 247, 249);
+            color: rgb(13, 1, 1);
+          "
+        ></div>
+      </div>
+      <div class="container col-6" id="bform">
+        
+        
+        <form id="booking-form">
+          <label for="email">Enter Booking Details</label>
+          <div class="form-group">
+            <!-- <label for="name">Name</label> -->
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+            <div class="invalid-feedback" id="nameError"></div>
+          </div>
+
+          <div class="form-group">
+            <!-- <label for="email">Email</label> -->
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <div class="invalid-feedback" id="emailError"></div>
+          </div>
+          <div class="form-group">
+            <!-- <label for="phone">Phone Number</label> -->
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+            />
+            <div class="invalid-feedback" id="phoneError"></div>
+          </div>
+          <div class="form-group">
+            <!-- <label for="address">Address</label> -->
+            <textarea name="" id="address" cols="21" rows="10" placeholder="Address"></textarea>
+            <!-- <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address"> -->
+            <div class="invalid-feedback" id="addressError"></div>
+          </div>
+          <button
+            type="submit"
+            class="btn"
+            style="background: #6606e3"
+            id="bookingButton"
+          >
+            Book Now
+          </button>
+        </form>
+      </div>
+      
+    </section>
+
+    <!-- Cart Section -->
+
+    <section
+      id="footer"
+      style="background: black; color: white; width: 100vw; padding: 40px 0px"
+    >
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>About Us</h3>
+              <p>
+                ZoYo Rooms is India's largest branded network of hotels offering
+                comfortable stay experiences at affordable prices.
+              </p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Contact Us</h3>
+              <p>Email: support@zoyorooms.com<br />Phone: +91-9313931393</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Follow Us</h3>
+              <ul class="list-inline">
+                <li>
+                  <a href="#"><i class="fa fa-facebook">facebook</i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i>twitter</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-instagram"></i>instagram</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Download App</h3>
+              <!-- <a href="#"><img src="images/play-store.png" alt="Google Play Store"></a> -->
+              <!-- <a href="#"><img src="images/app-store.png" alt="Apple App Store"></a> -->
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-center">
+                © 2023 ZoYo Hotels. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
